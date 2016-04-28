@@ -61,6 +61,16 @@ Applications can be pushed with their other dependencies after "publishing" the 
     cf push my_app -b custom_aspnet5_buildpack
     ```  
 
+## Unit Testing
+
+
+Having performed the steps from Building:
+
+  ```shell
+  BUNDLE_GEMFILE=cf.Gemfile bundle exec rspec
+  ```
+
+
 ## Contributing
 
 Find our guidelines [here](./CONTRIBUTING.md).
