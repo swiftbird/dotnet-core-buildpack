@@ -22,6 +22,21 @@ describe 'CF Asp.Net5 Buildpack' do
     end
   end
 
+  context 'deploy static site application without internet', :cached do
+    let(:app_name) { 'static_file_no_internet' }
+
+    it 'responds to http' do
+      expect(app).to be_running
+      expect(app).to have_logged /ASP.NET 5 buildpack is done creating the droplet/
+
+      browser.visit_path('/')
+      expect(browser).to have_body('ASP.NET')
+      expect(browser).to have_body('Starter Application')
+
+      expect(app).not_to have_internet_traffic
+    end
+  end
+
   context 'deploy project.json application' do
     let(:app_name) { 'mvc_6_application' }
 
