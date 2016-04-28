@@ -23,7 +23,7 @@ describe 'CF Asp.Net5 Buildpack' do
   end
 
   context 'deploy project.json application' do
-    let(:app_name) { 'project_json_application' }
+    let(:app_name) { 'mvc_6_application' }
 
     it 'responds to http' do
       expect(app).to be_running
