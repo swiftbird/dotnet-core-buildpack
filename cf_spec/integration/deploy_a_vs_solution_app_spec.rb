@@ -9,8 +9,8 @@ describe 'CF Asp.Net5 Buildpack' do
     Machete::CF::DeleteApp.new.execute(app)
   end
 
-  context 'deploy visual studio solution' do
-    let(:app_name) { 'visual_studio_application' }
+  context 'deploy static site application with internet' do
+    let(:app_name) { 'static_file_internet' }
 
     it 'responds to http' do
       expect(app).to be_running
