@@ -67,8 +67,18 @@ Applications can be pushed with their other dependencies after "publishing" the 
 Having performed the steps from Building:
 
   ```shell
-  BUNDLE_GEMFILE=cf.Gemfile bundle exec rspec
+  bundle exec rspec
   ```
+
+### Integration Testing
+
+Integration tests are run using (Machete)[https://github.com/cloudfoundry/machete].
+
+To run the tests:
+
+```
+CF_PASSWORD=admin BUNDLE_GEMFILE=cf.Gemfile bundle exec buildpack-build --host=local.pcfdev.io
+```
 
 
 ## Contributing
