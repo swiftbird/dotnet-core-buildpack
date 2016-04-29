@@ -28,12 +28,12 @@ describe 'CF Asp.Net5 Buildpack' do
     it 'responds to http' do
       expect(app).to be_running
       expect(app).to have_logged /ASP.NET 5 buildpack is done creating the droplet/
+      expect(app).not_to have_internet_traffic
 
       browser.visit_path('/')
       expect(browser).to have_body('ASP.NET')
       expect(browser).to have_body('Starter Application')
 
-      expect(app).not_to have_internet_traffic
     end
   end
 
