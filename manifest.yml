@@ -13,6 +13,9 @@ dependencies:
       - cflinuxfs2
     uri: https://github.com/cloudfoundry-community/asp.net5-buildpack/releases/download/v0.7/libunwind-cflinuxfs2-1.1.tar.gz
     md5: b76452a8a2400f3cfdf189761e8be97e
+  - name: java8
+    version: 1.8
+    uri: https://github.com/cloudfoundry-community/asp.net5-buildpack/releases/download/v0.7/libunwind-cflinuxfs2-1.1.tar.gz
 
 exclude_files:
   - .git/
